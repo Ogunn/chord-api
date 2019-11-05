@@ -1,4 +1,4 @@
-import * as mongoose from "mongoose";
+import mongoose from "../database";
 
 const ChartSchema = new mongoose.Schema({
   name: {
@@ -11,4 +11,6 @@ const ChartSchema = new mongoose.Schema({
   }
 });
 
-export default mongoose.model("Chord", ChartSchema);
+const Chord = mongoose.model("Chord", ChartSchema);
+
+export default Chord;
